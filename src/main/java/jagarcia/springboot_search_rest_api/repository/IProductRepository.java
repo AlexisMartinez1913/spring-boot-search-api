@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface IProductRepository extends JpaRepository<Product, Long> {
 
-    //JPQL Query (Java Persistence Query Language) 
+    //JPQL Query (Java Persistence Query Language)
     @Query("SELECT p FROM Product p WHERE " +
             "p.name LIKE CONCAT('%', :query, '%') OR " +
             "p.description LIKE CONCAT('%', :query, '%')")
